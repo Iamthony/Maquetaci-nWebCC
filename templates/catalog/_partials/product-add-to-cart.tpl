@@ -26,7 +26,7 @@
 <div class="product-add-to-cart">
     <div class="container mt-1">
         <div class="row">
-            {if !$configuration.is_catalog}
+            {* {if !$configuration.is_catalog}
                 <div class="col-xs-12 col-sm-3">
                     <b class="ml-2" style="font-weight: 600; color: black; font-size: 13px;">
                         Cantidad:</b>
@@ -71,7 +71,7 @@
                         {/if}
                     </p>
                 {/block}
-            {/if}
+            {/if} *}
         </div>
     </div>
     <div class="d-flex flex-row bd-highlight mb-3 ">
