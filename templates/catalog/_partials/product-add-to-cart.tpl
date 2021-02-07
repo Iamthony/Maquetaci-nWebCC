@@ -24,14 +24,14 @@
  *}
 
 <div class="product-add-to-cart">
-    <div class="container mt-1">
+    {* <div class="container mt-1">
         <div class="row">
-            {* {if !$configuration.is_catalog}
+            {if !$configuration.is_catalog}
                 <div class="col-xs-12 col-sm-3">
-                    <b class="ml-2" style="font-weight: 600; color: black; font-size: 13px;">
+                    <b style="font-weight: 600; color: black; font-size: 13px;">
                         Cantidad:</b>
                 </div>
-                <div class="col-xs-12 col-sm-8 ml-1">
+                <div class="col-xs-12 col-sm-8">
                     {block name='product_quantity'}
                         <div class="product-quantity row align-items-center no-gutters ml-n3">
                             <label for="quantity_wanted"
@@ -71,10 +71,10 @@
                         {/if}
                     </p>
                 {/block}
-            {/if} *}
+            {/if}
         </div>
-    </div>
-    <div class="d-flex flex-row bd-highlight mb-3 ">
+    </div> *}
+    <div class="d-flex flex-row bd-highlight mb-3">
         <div class="p-2 bd-highlight d-none d-sm-block">
             <div class="button-general button-dolar mt-3 px-4">
                 <p class="texto-boton">$</p>

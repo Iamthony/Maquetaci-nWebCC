@@ -24,7 +24,7 @@
  *}
 {if $product.show_price}
     <div class="product-prices">
-        <div class="container ml-n1">
+        <div class="container ml-n2">
             <div class="row">
                 <div class="col-md-12">
                     <div class="current-price">
