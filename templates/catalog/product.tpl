@@ -90,9 +90,17 @@
                             {include file='catalog/_partials/product-quantity.tpl'}
                         {/block}
 
-                        {block name='product_variants'}
-                            {include file='catalog/_partials/product-variants.tpl'}
-                        {/block}
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-3 col-txt">
+                                <b style="font-weight: 600; color: black;">
+                                    Tamaño:</b>
+                            </div>
+                            <div class="col-xs-12 col-sm-9 col-txt mb-2">
+                                {block name='product_variants'}
+                                    {include file='catalog/_partials/product-variants.tpl'}
+                                {/block}
+                            </div>
+                        </div>
 
                         {block name='promotion'}
                             <div class="row">

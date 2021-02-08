@@ -3688,6 +3688,7 @@ input[type=submit].btn-block {
 }
 
 .custom-select {
+    border-radius: 5px;
     display: inline-block;
     width: 100%;
     height: calc(1.5em + .75rem + 2px);
@@ -3699,7 +3700,6 @@ input[type=submit].btn-block {
     vertical-align: middle;
     background: #fff url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right .75rem center/8px 10px;
     border: 1px solid #ced4da;
-    border-radius: 0;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, .075);
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -9243,7 +9243,8 @@ h1 {
 }
 
 .bootstrap-touchspin>input {
-    max-width: 60px;
+    font-size: 0.9rem;
+    max-width: 35px;
     border: none;
     box-shadow: none;
     text-align: center;
@@ -9253,10 +9254,13 @@ h1 {
 }
 
 .bootstrap-touchspin .btn {
+    font-size: 13px;
     position: relative;
+    padding: 0px 10px 0px 10px;
     z-index: 2;
     color: #495057;
-    background-color: #fff
+    background-color: #fff;
+    border-color: #d2d2d2;
 }
 
 .bootstrap-touchspin .input-group-btn {

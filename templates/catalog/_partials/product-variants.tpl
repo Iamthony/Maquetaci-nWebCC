@@ -23,28 +23,25 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div class="product-variants">
-    <div class="row">
-        <div class="col-xs-12 col-sm-3 col-txt">
-            <b style="font-weight: 600; color: black;">Tamaño:</b>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-txt mt-n3">
-            {foreach from=$groups key=id_attribute_group item=group}
-                {if !empty($group.attributes)}
-                    <div class="form-group product-variants-item">
-                        {if $group.group_type == 'select'}
-                            <label for="group_{$id_attribute_group}"></label>
-                            <div>
-                                <select class="custom-select w-auto" id="group_{$id_attribute_group}"
-                                    data-product-attribute="{$id_attribute_group}" name="group[{$id_attribute_group}]">
-                                    {foreach from=$group.attributes key=id_attribute item=group_attribute}
-                                        <option value="{$id_attribute}" title="{$group_attribute.name}" {if $group_attribute.selected}
-                                            selected="selected" {/if}>{$group_attribute.name}</option>
-                                    {/foreach}
-                                </select>
-                            </div>
-                        {elseif $group.group_type == 'color'}
-
-                            {* <div class="label"></div>
+  {foreach from=$groups key=id_attribute_group item=group}
+      {if !empty($group.attributes)}
+      <div class="form-group product-variants-item mt-n3">
+      {if $group.group_type == 'select'}
+          <label for="group_{$id_attribute_group}"></label>
+          <div>
+          <select
+          class="custom-select w-auto"
+          id="group_{$id_attribute_group}"
+          data-product-attribute="{$id_attribute_group}"
+          name="group[{$id_attribute_group}]">
+          {foreach from=$group.attributes key=id_attribute item=group_attribute}
+            <option value="{$id_attribute}" title="{$group_attribute.name}"{if $group_attribute.selected} selected="selected"{/if}>{$group_attribute.name}</option>
+          {/foreach}
+        </select>
+          </div>
+      {elseif $group.group_type == 'color'}
+        
+          {* <div class="label"></div>
           <div class="clearfix">
           {foreach from=$group.attributes key=id_attribute item=group_attribute}
               <label class="label-color">
@@ -57,20 +54,16 @@
           {/foreach}
           </div> *}
 
-                        {elseif $group.group_type == 'radio'}
-                            <div class="label">{$group.name}</div>
-                            {foreach from=$group.attributes key=id_attribute item=group_attribute}
-                                <div class="custom-control custom-radio">
-                                    <input id="r-variant-{$id_attribute_group}-{$id_attribute}" class="custom-control-input"
-                                        type="radio" data-product-attribute="{$id_attribute_group}" name="group[{$id_attribute_group}]"
-                                        value="{$id_attribute}" {if $group_attribute.selected} checked="checked" {/if}>
-                                    <label class="custom-control-label"
-                                        for="r-variant-{$id_attribute_group}-{$id_attribute}">{$group_attribute.name}</label>
-                                </div>
-                            {/foreach}
-                        {/if}
-                    </div>
-                {/if}
-            {/foreach}
-        </div>
+      {elseif $group.group_type == 'radio'}
+          <div class="label">{$group.name}</div>
+          {foreach from=$group.attributes key=id_attribute item=group_attribute}
+              <div class="custom-control custom-radio">
+                <input id="r-variant-{$id_attribute_group}-{$id_attribute}" class="custom-control-input" type="radio" data-product-attribute="{$id_attribute_group}" name="group[{$id_attribute_group}]" value="{$id_attribute}"{if $group_attribute.selected} checked="checked"{/if}>
+                <label class="custom-control-label" for="r-variant-{$id_attribute_group}-{$id_attribute}">{$group_attribute.name}</label>
+              </div>
+          {/foreach}
+      {/if}
     </div>
+    {/if}
+  {/foreach}
+</div>
