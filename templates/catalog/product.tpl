@@ -36,6 +36,7 @@
                 {block name='page_content_container'}
                     <section class="page-content--product" id="content">
                         {block name='page_content'}
+
                             {block name='product_flags'}
                                 {include file='catalog/_partials/product-flags.tpl'}
                             {/block}
@@ -109,7 +110,7 @@
                                 </div>
                                 <div class="col-xs-12 col-sm-9">
                                     <div class="tabPromo font-weight-bold mb-2" role="tab">
-                                        <a href="#" id="offert">
+                                        <a href="" id="offert">
                                             Ofertas especiales de la semana
                                         </a>
                                     </div>

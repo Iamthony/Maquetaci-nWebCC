@@ -10,3 +10,7 @@ for (i = 0; i < accordion.length; i++) {
         this.classList.toggle('active')
     })
 }
+
+if ($('.p-3.border').text().length == 0) {
+    $('.product-additional-info').remove();
+}

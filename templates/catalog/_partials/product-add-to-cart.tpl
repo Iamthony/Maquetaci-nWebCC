@@ -104,7 +104,7 @@
             </div>
         </div>
     </div>
-    {* <div class="mobile-section d-block d-sm-none">
+    <div class="mobile-section d-block d-sm-none">
         <div class="d-flex flex-row">
             <div class="p-2">
                 <div class="button-movil button-dolar-movil">
@@ -124,5 +124,5 @@
                 </div>
             </div>
         </div>
-    </div> *}
+    </div>
 </div>
