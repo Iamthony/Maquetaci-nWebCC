@@ -134,7 +134,7 @@
                                         <div class="contentBx">
                                             <div class="label-wrapper2 shadow-sm mb-2 bg-white rounded p-1"
                                                 style="font-size: 13px;">
-                                                ¿Recoges en tienda? Comprueba disponibilidad
+                                                ¿Recoges en tienda?
                                             </div>
                                             <div class="content2">
                                                 <p style="font-size: 13px;">*Realiza tu pedido ahora y te avisamos cuando
@@ -146,13 +146,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-1">
+                            <div class="row">
                                 <div class="col-xs-12 col-sm-3 col-txt">
                                     <b style="font-weight: 600; color: black;">Financiación:</b>
                                 </div>
                                 <div class="col-xs-12 col-sm-9">
-                                    <div class="ficha-product mt-2 p-1" style="font-size: 13px;">
-                                        <div class="d-flex bd-highlight mt-1">
+                                    <div class="ficha-product py-2 px-1" style="font-size: 13px;">
+                                        <div class="d-flex bd-highlight" style="height: 20px;">
                                             <div class="bd-highlight">
                                                 <img src="https://i.imgur.com/dW0YMo3.png">
                                                 <span>
@@ -190,8 +190,6 @@
                                             {/if}
                                         {/block}
 
-
-
                                         {block name='product_discounts'}
                                             {include file='catalog/_partials/product-discounts.tpl'}
                                         {/block}
@@ -221,7 +219,7 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-8">
+                    <div class="col-sm-6">
                         {block name='product_tabs'}
                             {include file='catalog/_partials/product-tabs.tpl'}
                         {/block}

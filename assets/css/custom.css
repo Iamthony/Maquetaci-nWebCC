@@ -105,6 +105,10 @@ body {
     margin-top: -45px;
 }
 
+.p-6 {
+    padding: 0.2rem!important;
+}
+
 .tabPromo {
     border: 1px dashed #ff6000;
     background-color: #ffeac9;
@@ -124,11 +128,9 @@ body {
 }
 
 .button-general {
-    width: 100%;
     border: 2px solid #dcdcdc;
     border-radius: 5px;
     height: 50px;
-    padding: 0 30px 0 50px;
     text-align: center;
     transition: all .2s ease-in;
     cursor: pointer;
@@ -156,8 +158,8 @@ body {
 }
 
 .button-dolar {
-    width: 80%;
-    margin-left: 10px;
+    font-size: 29px;
+    width: 100%;
     padding: 10px;
 }
 
@@ -168,7 +170,7 @@ body {
 }
 
 .texto-boton {
-    font-size: 32px;
+    font-size: 29px;
     margin-top: -10px;
     margin-left: -5px;
 }
@@ -340,7 +342,7 @@ a {
 
 .icon1 {
     font-size: 29px;
-    left: 120px;
+    left: 105px;
     margin-top: 3px;
     position: absolute;
     transition: all .2s ease-in;
@@ -349,13 +351,17 @@ a {
 
 .icon2 {
     position: absolute;
-    left: 130px;
+    left: 119px;
     font-size: 15px;
     font-weight: bold;
 }
 
 .icon2:hover {
     animation: text-move 1s infinite alternate-reverse;
+}
+
+.scrollTop {
+    transition: .35s;
 }
 
 

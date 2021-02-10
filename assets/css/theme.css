@@ -765,7 +765,8 @@ main>.notifications-container {
 .product-miniature {
     position: relative;
     width: 100%;
-    padding-left: 15px
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .col {
@@ -4045,9 +4046,9 @@ input[type=submit].btn-block {
 
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
-    color: #2fb5d2;
+    color: black;
     background-color: #fff;
-    border-color: transparent transparent #2fb5d2
+    border-color: transparent transparent #ff6000;
 }
 
 .nav-tabs .dropdown-menu {

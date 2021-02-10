@@ -1,0 +1,29 @@
+deploy-master:
+  script:
+  - ~/deploy-prestashop $CI_COMMIT_REF_NAME $CI_PROJECT_DIR $CI_PROJECT_NAME 0
+  only:
+  - master
+deploy-master-reset:
+  script:
+  - ~/deploy-prestashop $CI_COMMIT_REF_NAME $CI_PROJECT_DIR $CI_PROJECT_NAME 1
+  when: manual
+  only:
+  - master  
+
+deploy-qa:
+  script:
+  - ~/deploy-prestashop $CI_COMMIT_REF_NAME $CI_PROJECT_DIR $CI_PROJECT_NAME 0
+  only:
+  - /^qa-.*$/
+deploy-qa-reset:
+  script:
+  - ~/deploy-prestashop $CI_COMMIT_REF_NAME $CI_PROJECT_DIR $CI_PROJECT_NAME 1
+  when: manual
+  only:
+  - /^qa-.*$/
+deploy-qa-remove:
+  script:
+  - ~/deploy-prestashop-remove $CI_COMMIT_REF_NAME $CI_PROJECT_DIR $CI_PROJECT_NAME
+  when: manual
+  only:
+  - /^qa-.*$/

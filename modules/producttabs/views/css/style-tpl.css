@@ -1,0 +1,31 @@
+<style type="text/css">
+
+    .tabs .nav-tabs .nav-link {
+        background-color: {$color};
+        color: {$font_color};
+    }
+
+    .tabs .nav-tabs .nav-link.active {
+        color: {$font_color_selected};
+        background-color: {$color_selected};
+    }
+
+    #accordion h1.ui-state-default{
+        background: {$color};
+        color: {$font_color};
+    }
+
+    #accordion h1.ui-state-active {
+        color: {$font_color_selected};
+        background: {$color_selected};
+    }
+
+    #vertical > section > h3 {
+        background: {$color};
+        color: {$font_color};
+        padding: 10px;
+        box-shadow: 2px 2px 11px 0px rgba(0, 0, 0, 0.1);
+    }
+
+
+</style>

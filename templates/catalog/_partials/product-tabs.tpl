@@ -30,6 +30,16 @@
                             aria-controls="attachments">{l s='Attachments' d='Shop.Theme.Catalog'}</a>
                 </li>
             {/if}
+            {if $product.is_customizable && count($product.customizations.fields)}
+                <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-toggle="tab"
+                  href="#customizations"
+                  role="tab"
+                  aria-controls="customizations">{l s='Product customization' d='Shop.Theme.Catalog'}</a>
+              </li>
+            {/if}
             {foreach from=$product.extraContent item=extra key=extraKey}
                 <li class="nav-item">
                     <a
@@ -52,6 +62,16 @@
             {block name='product_details'}
                 {include file='catalog/_partials/product-details.tpl'}
             {/block}
+
+            {* Add the content of tab Product customization*}
+            <div class="tab-pane fade in" id="customizations" role="tabpanel">
+            {if $product.is_customizable && count($product.customizations.fields)}
+               {block name='product_customization'}
+                 {include file="catalog/_partials/product-customization.tpl" customizations=$product.customizations}
+               {/block}
+             {/if}
+             </div>
+             {* End of add the content of tab Product customization*}
 
             {block name='product_attachments'}
                 {if $product.attachments}

@@ -74,32 +74,37 @@
             {/if}
         </div>
     </div> *}
-    <div class="d-flex flex-row bd-highlight mb-3">
-        <div class="p-2 bd-highlight d-none d-sm-block">
-            <div class="button-general button-dolar mt-3 px-4">
-                <p class="texto-boton">$</p>
+    <div class="row mt-2">
+        <div class="col-xs-12">
+            <div class="d-flex flex-row bd-highlight mb-3">
+                <div class="p-6 bd-highlight d-none d-sm-block">
+                    <div class="button-general button-dolar mt-3 px-4">
+                        <p class="texto-boton">$</p>
+                    </div>
+                </div>
+                <div class="p-6 bd-highlight flex-fill d-none d-sm-block">
+                    <div class="button-general button-shop mt-3" data-button-action="add-to-cart" type="submit"
+                        {l s='' d='Shop.Theme.Actions'}>
+                        <i class="icon1">}</i>
+                        <i class="icon2">¥</i>
+                        <p class="texto-boton-shop">Añadir al carrito</p>
+                    </div>
+                </div>
+                <div class="p-6 bd-highlight flex-grow-1 ml-n3 d-none d-sm-block">
+                    <div class="add col-auto">
+                        <button class="btn btn-primary add-to-cart btn-lg btn-block btn-add-to-cart js-add-to-cart"
+                            data-button-action="add-to-cart" type="submit" {if !$product.add_to_cart_url} disabled
+                            {/if}>
+                            <span class="btn-add-to-cart__spinner" role="status" aria-hidden="true"></span>
+                            {l s='Comprar' d='Shop.Theme.Actions'}
+                        </button>
+                    </div>
+                    {hook h='displayProductActions' product=$product}
+                </div>
             </div>
-        </div>
-        <div class="p-2 bd-highlight d-none d-sm-block">
-            <div class="button-general button-shop mt-3" data-button-action="add-to-cart" type="submit"
-                {l s='' d='Shop.Theme.Actions'}>
-                <i class="icon1">}</i>
-                <i class="icon2">¥</i>
-                <p class="texto-boton-shop">Añadir al carrito</p>
-            </div>
-        </div>
-        <div class="p-2 bd-highlight flex-grow-1 ml-n3 d-none d-sm-block">
-            <div class="add col-auto">
-                <button class="btn btn-primary add-to-cart btn-lg btn-block btn-add-to-cart js-add-to-cart"
-                    data-button-action="add-to-cart" type="submit" {if !$product.add_to_cart_url} disabled {/if}>
-                    <span class="btn-add-to-cart__spinner" role="status" aria-hidden="true"></span>
-                    {l s='Comprar' d='Shop.Theme.Actions'}
-                </button>
-            </div>
-            {hook h='displayProductActions' product=$product}
         </div>
     </div>
-    <div class="mobile-section d-block d-sm-none">
+    {* <div class="mobile-section d-block d-sm-none">
         <div class="d-flex flex-row">
             <div class="p-2">
                 <div class="button-movil button-dolar-movil">
@@ -109,15 +114,15 @@
             <div class="p-2">
                 <div class="button-ws">
                     <p class="texto-boton-ws" data-button-action="add-to-cart" type="submit"
-                    {l s='' d='Shop.Theme.Actions'}>j</p>
+                        {l s='' d='Shop.Theme.Actions'}>j</p>
                 </div>
             </div>
             <div class="col-sm-2 p-2">
                 <div class="button-buy-movil">
                     <p class="texto-boton-buy-ws" data-button-action="add-to-cart" type="submit"
-                    {l s='' d='Shop.Theme.Actions'}>Comprar</p>
+                        {l s='' d='Shop.Theme.Actions'}>Comprar</p>
                 </div>
             </div>
         </div>
-    </div>
+    </div> *}
 </div>
